@@ -1,0 +1,22 @@
+@use 'bases/variables' as v; 
+@use 'bases/mixins' as m;
+
+.nosotros {
+    padding-block: 5rem;
+    &__heading {
+        text-align: center;
+        @include m.separador;
+    }
+    &__contenido {
+        text-align: center;
+        @include m.tablet {
+            display: flex;
+            gap: 1rem;
+        }
+
+    }
+    &__icono {
+        margin: 0 auto;
+    }
+
+}
