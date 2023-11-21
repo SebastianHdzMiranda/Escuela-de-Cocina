@@ -2,20 +2,22 @@
 @use 'bases/mixins' as m;
 
 .bloques {
-    @include m.grid(1, 0);
     @include m.tablet {
         @include m.grid(2, 0);
+        // Rellena el grid
+        grid-auto-flow: dense;
     }
 }
 .bloque {
     min-height: 40rem;
     background-position: center;
     background-size: cover;
+    
     display: flex;
-    text-align: center;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     &:nth-child(1) {
         background-color: v.$primario;
     }
@@ -30,22 +32,13 @@
     }
     &:nth-child(4) {
         background-image: url(../img/bloque_2.jpg);
-        @include m.tablet {
-            grid-column: 1/2;
-            grid-row: 2/3;
-        }
     }
     &__contenido {
         color: v.$blanco;
         max-width: 40rem;
-        &::before, &::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 1px;
-            background-color: v.$blanco;
-            margin: 3rem 0;
-        }
+        
+        border-block: 1px solid v.$blanco;
+        padding-block: 1rem;
     }
     &__heading {
         text-transform: uppercase;

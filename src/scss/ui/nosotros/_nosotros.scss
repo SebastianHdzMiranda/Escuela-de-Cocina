@@ -4,7 +4,6 @@
 .nosotros {
     padding-block: 5rem;
     &__heading {
-        text-align: center;
         @include m.separador;
     }
     &__contenido {

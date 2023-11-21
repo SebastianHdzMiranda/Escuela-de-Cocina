@@ -8,7 +8,6 @@
     align-items: center;
     @include m.tablet {
         flex-direction: row;
-        align-items: center;
         justify-content: space-between;
     }
     &__enlace {
